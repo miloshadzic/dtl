@@ -93,9 +93,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-)
 
-try:
-    from local_settings import *
-except ImportError, exp:
-    pass
+    'dtl',
+
+)
