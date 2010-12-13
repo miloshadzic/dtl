@@ -1,4 +1,4 @@
-from dtl.models import Book, Author,Category
+from dtl.models import Book, Author,Category,BookReservation,BookOnLoan,User
 from django.contrib import admin
 
 class AuthorInline(admin.TabularInline):
@@ -15,7 +15,7 @@ class AuthorAdmin(admin.ModelAdmin):
     list_editable = ['first_name', 'last_name']
 
 class BookAdmin(admin.ModelAdmin):
-    fields =('title', 'isbn')
+    fields =('title', 'isbn', 'pub_date', 'language')
     inlines = [ AuthorInline, CategoryInline ]
 
 class CategoryAdmin(admin.ModelAdmin):
@@ -26,3 +26,6 @@ class CategoryAdmin(admin.ModelAdmin):
 admin.site.register(Author, AuthorAdmin)
 admin.site.register(Category, CategoryAdmin)
 admin.site.register(Book, BookAdmin)
+admin.site.register(BookReservation)
+admin.site.register(BookOnLoan)
+admin.site.register(User)

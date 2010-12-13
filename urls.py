@@ -4,6 +4,8 @@ from django.conf.urls.defaults import *
 from django.contrib import admin
 admin.autodiscover()
 
+from dtl import models, views
+
 urlpatterns = patterns('',
     # Example:
     # (r'^biblioteka/', include('biblioteka.foo.urls')),
