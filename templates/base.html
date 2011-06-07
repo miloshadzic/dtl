@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="http://localhost:8000/site_media/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8">
+        <title>{% block title %}Fonis Biblioteka{% endblock %}</title>
+    </head>
+    <body>
+        <div id=main>
+        <div id=header>
+            <form action="/search/" type="get">
+              <a id="masthead" href={% url dtl.views.list_books %}>FONIS
+            Biblioteka</a><span id="search"><input  type="text"
+            name="q" placeholder="Search the library." />
+              <input type="submit" value="Search" /></span>
+              </form>
+       </div>
+            <div id="content">
+                {% block content %}
+                {% endblock %}
+        </div>
+    </div>
+    </body>
+</html>

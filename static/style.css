@@ -1,0 +1,194 @@
+/* v1.0 | 20080212 */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+    text-decoration:none;
+}
+body {
+    color:#424242;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+        width:100%;
+}
+
+h1 {
+    font-size:2em;
+    line-height:1.5em;
+    font-weight:bold;
+}
+
+h2 {line-height:1.5em;}
+
+#booktitle {
+    font-size: 2em;
+    font-weight:bold;
+    line-height:1.5em;
+    color:#424242;
+}
+#header {
+    padding-top:1em;
+    padding-bottom:0.5em;
+}
+
+#nav {
+    padding-top:0.2em;
+    padding-bottom:0.1em;
+    font-weight:bold;
+    border-bottom:3px solid #eee;
+}
+
+a {
+    color:#424242;
+    border-bottom-color:rgba(255,153,0,0);
+    border-bottom-style:dotted;
+    border-bottom-width:2px;
+    -webkit-transition:border-bottom-color 0.2s ease-in;
+    -moz-transition:border-bottom-color 0.2s ease-in;
+}
+
+a:hover {
+    border-bottom:2px dotted rgba(255,153,0,1);
+} 
+
+#header a {
+    font-size:2em;
+    font-weight:bold;
+}
+
+#main {
+    font-family:Droid Sans, Lucida Grande, Segoe UI, Arial, sans-serif;
+    font-size:1em;
+    margin-left:1em;
+   }
+
+#content {
+    max-width:80%;
+    margin-top:0.5em;
+    margin-right:auto;
+}
+
+.book {
+    font-weight:bold;
+}
+
+td {
+    padding-top:0.25em;
+    padding-bottom:0.25em;
+}
+
+#authors {
+    line-height:1.5em;
+}
+
+#language {
+    line-height:
+}
+
+#categories {
+    font-size:0.8em;
+    line-height:1.2em;
+    margin-top:1em;
+}
+
+h4 {
+    font-weight:normal;
+    padding-top:2em;
+}
+
+#copies a {
+    line-height:2em;
+    color:white;
+    padding:0.1em 0.2em 0.1em 0.5em;
+    margin-left:-0.5em;
+    border-radius:0.3em 0em;
+    -webkit-box-shadow:1px 1px 1px #888;
+    -moz-box-shadow:1px 1px 1px #888;
+}
+
+#copies b {
+    font-size:1.2em;
+}
+
+#copies a:hover {
+    border:0;
+}
+
+#available {
+    background:#9c3;
+    -webkit-transition:background 0.3s ease;
+    -moz-transition:background 0.3s ease;
+}
+    
+
+#available:hover {
+    background:#690;
+}
+
+#loaned {
+    background:#CB3300;
+    -webkit-transition:background 0.3s ease;
+    -moz-transition:background 0.3s ease;
+}
+#loaned:hover {
+    background:#993300;
+}
+
+.pagination {
+    font-size:0.8em;
+    line-height:1.5em;
+}
+
+#tableindex, h2 {
+    font-weight:bold;
+    border-bottom:3px dotted #eee;
+    text-shadow:1px 1px 1px #eee;
+}
+
+#content {margin:0 auto;}
+#search {float:right; margin-right:1em;}
+
+form,input {font-family:'Droid Sans', Lucida Grande, sans-serif;}
+
+#dashboard > li {font-size:1em;line-height:2em;font-weight:bold}

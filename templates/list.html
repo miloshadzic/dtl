@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+    <tr id=tableindex>
+        <td>Book</td><td>Author</td><td>Year</td>
+    </tr>
+    {% for book in books.object_list %}
+    <tr>
+        <td class=book>
+            <a href="/detail/{{book.id}}">{{ book.title }}</a>
+        </td>
+        <td class=author>
+            {% for author in book.authors.all %}
+            <a href="/author/{{ author.id }}">{{ author }}</a>{% if forloop.last %}.{% else %}, {% endif %}
+            {% endfor %}
+        </td>
+        <td>
+            {{ book.pub_date }}
+        </td>
+    </tr>
+    {% endfor %}
+    {% if books.paginator.num_pages > 1 %}
+</table>
+<div class="pagination">
+    <span class="step-links">
+        {% if books.has_previous %}
+            <a href="?page={{ contacts.previous_page_number }}">previous</a>
+            {% else %} previous
+        {% endif %}
+
+        <span class="current">
+            <b>{{ books.number }}</b>/<a href="?page={{ books.paginator.num_pages }}">{{ books.paginator.num_pages }}
+        </span>
+
+        {% if books.has_next %}
+            <a href="?page={{ books.next_page_number }}">next</a>
+            {% else %} next
+        {% endif %}
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
+

@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+  <form action="/books/search/" method="get">
+    <label for="q">Search: </label>
+    <input type="text" name="q"  placeholder="search" />
+    <input type="submit" value="Submit" />
+  </form>
+
+{% endblock %}

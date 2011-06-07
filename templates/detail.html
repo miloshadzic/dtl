@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1 id=booktitle>{{ book.title }}</h2>
+<h3>
+<ul id=authors>
+{% for author in book.authors.all %}
+<li><a href="/author/{{ author.id }}/">{{ author }}</a>{% if not forloop.last %},{% endif %}</li>
+{% endfor %}
+</ul>
+</h3>
+<h4>ISBN: {{ book.isbn }}</h4>
+<ul id=categories>
+    {% for category in book.categories.all %}
+    <li><a href="/category/{{ category.id }}/">{{ category }}</a></li>
+    {% endfor %}
+</ul>
+<h3>Copies:</h3>
+<ul id=copies>
+    {% for copy, loaned in copies %}
+    <li>{% if loaned %}<a href="#" id=loaned>Loaned{% else %}<a href="#" id=available>Available{% endif %}</a></li>
+        {% endfor %}
+</ul>
+{% endblock %}
