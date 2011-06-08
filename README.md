@@ -7,3 +7,5 @@ To set up the database run
 start the development server with
 
     python manage.py runserver
+
+``django-admin`` is at ``/admin``. Username and password are both ``admin``.
